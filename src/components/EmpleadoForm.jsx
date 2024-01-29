@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
 
 const EmpleadoForm = ({ agregarEmpleado }) => {
   const [nuevoEmpleado, setNuevoEmpleado] = useState({
     id: 0,
-    fullName: "",
-    title: "",
-    department: "",
-    pic: "",
+    fullName: '',
+    title: '',
+    department: '',
+    pic: '',
   });
 
   const handleInputChange = (e) => {
@@ -20,10 +20,10 @@ const EmpleadoForm = ({ agregarEmpleado }) => {
     agregarEmpleado({ ...nuevoEmpleado, id: Date.now() });
     setNuevoEmpleado({
       id: 0,
-      fullName: "",
-      title: "",
-      department: "",
-      pic: "",
+      fullName: '',
+      title: '',
+      department: '',
+      pic: '',
     });
   };
 
