@@ -4,9 +4,7 @@ import { Card, Button } from 'react-bootstrap';
 const EmpleadoCard = ({ empleado, eliminarEmpleado }) => {
   return (
     <Card style={{ width: "18rem" }} className="mb-3">
-      <Card.Img
-        variant="top"
-        src={`${process.env.PUBLIC_URL}/${empleado.pic}`}
+      <Card.Img variant="top" src={empleado.remoteImage} style={{  height: "100px" }}
       />
       <Card.Body>
         <Card.Title>{empleado.fullName}</Card.Title>
