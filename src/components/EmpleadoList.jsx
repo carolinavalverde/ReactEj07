@@ -5,9 +5,9 @@ const EmpleadoList = ({ empleados, eliminarEmpleado }) => {
   return (
     <div>
       <h2 className="bg-dark text-bg-dark p-2">Lista de Empleados</h2>
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap flex-column">
         {empleados.map((empleado) => (
-          <EmpleadoCard
+          <EmpleadoCard 
             key={empleado.id}
             empleado={empleado}
             eliminarEmpleado={eliminarEmpleado}
