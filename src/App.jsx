@@ -1,47 +1,35 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./style/App.css";
-import ColorForm from "./components/ColorForm";
-import ColorGrid from "./components/ColorGrid";
+import EmpleadoList from "./components/EmpleadoList.jsx";
+import EmpleadoForm from "./components/EmpleadoForm.jsx";
 
 const App = () => {
-  const [colors, setColors] = useState([]);
+  const [empleados, setEmpleados] = useState(() => {
+    const storedEmpleados = localStorage.getItem("empleados");
+    return storedEmpleados ? JSON.parse(storedEmpleados) : [];
+  });
 
   useEffect(() => {
-    const savedColors = JSON.parse(localStorage.getItem("colors")) || [];
-    setColors(savedColors);
-  }, []);
+    localStorage.setItem("empleados", JSON.stringify(empleados));
+  }, [empleados]);
 
-  const addColor = (color) => {
-    const updatedColors = [...colors, color];
-    setColors(updatedColors);
-    localStorage.setItem("colors", JSON.stringify(updatedColors));
+  const agregarEmpleado = (nuevoEmpleado) => {
+    setEmpleados([...empleados, nuevoEmpleado]);
   };
 
-  const deleteColor = (colorToDelete) => {
-    const updatedColors = colors.filter((color) => color !== colorToDelete);
-    setColors(updatedColors);
-    localStorage.setItem("colors", JSON.stringify(updatedColors));
+  const eliminarEmpleado = (id) => {
+    const empleadosActualizados = empleados.filter(
+      (empleado) => empleado.id !== id
+    );
+    setEmpleados(empleadosActualizados);
   };
 
   return (
-    <section className="container-fluid bg-dark-subtle">
-      <div className="bg-dark text-bg-dark text-center p-3 mb-2">
-        <h1>Color Palette</h1>
-      </div>
-      <div className="container d-flex justify-content-center card card-body shadow">
-        <div className="my-2">
-          <span>Administrar colores</span>
-        </div>
-        <ColorForm addColor={addColor} />
-        <hr />
-        {colors.length > 0 ? (
-          <ColorGrid colors={colors} deleteColor={deleteColor} />
-        ) : (
-          <p>No hay colores guardados.</p>
-        )}
-      </div>
-    </section>
+    <div className="container mt-4">
+      <h1 className="text-center">CRUD de Empleados</h1>
+      <EmpleadoList empleados={empleados} eliminarEmpleado={eliminarEmpleado} />
+      <EmpleadoForm agregarEmpleado={agregarEmpleado} />
+    </div>
   );
 };
 
