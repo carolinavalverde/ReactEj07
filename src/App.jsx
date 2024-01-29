@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div className="container mt-4">
-      <h1 className="text-center">CRUD de Empleados</h1>
+      <h1 className="text-center">Lista de Empleados</h1>
       <EmpleadoList empleados={empleados} eliminarEmpleado={eliminarEmpleado} />
       <EmpleadoForm agregarEmpleado={agregarEmpleado} />
     </div>
