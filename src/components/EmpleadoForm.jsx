@@ -7,7 +7,7 @@ const EmpleadoForm = ({ agregarEmpleado }) => {
     fullName: '',
     title: '',
     department: '',
-    pic: '',
+    picURL: '',
   });
 
   const handleInputChange = (e) => {
