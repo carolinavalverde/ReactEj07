@@ -25,11 +25,18 @@ const App = () => {
   };
 
   return (
-    <div className="container mt-4">
-      <h1 className="text-center">Lista de Empleados</h1>
-      <EmpleadoList empleados={empleados} eliminarEmpleado={eliminarEmpleado} />
-      <EmpleadoForm agregarEmpleado={agregarEmpleado} />
-    </div>
+    <section>
+      <h1 className="container-fluid p-3 bg-dark text-bg-dark text-center">
+        Empleados de la empresa
+      </h1>
+      <div className="container bg-dark-subtle">
+        <EmpleadoList
+          empleados={empleados}
+          eliminarEmpleado={eliminarEmpleado}
+        />
+        <EmpleadoForm agregarEmpleado={agregarEmpleado} />
+      </div>
+    </section>
   );
 };
 

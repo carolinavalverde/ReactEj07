@@ -3,7 +3,7 @@ import { Card, Button } from "react-bootstrap";
 
 const EmpleadoCard = ({ empleado, eliminarEmpleado }) => {
   return (
-    <Card style={{ width: "18rem" }} className="mb-3">
+    <Card style={{ width: "18rem" }} className="mb-3 mx-1">
       <Card.Img
         variant="top"
         src={empleado.pic}

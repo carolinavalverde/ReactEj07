@@ -29,11 +29,12 @@ const EmpleadoForm = ({ agregarEmpleado }) => {
 
   return (
     <div>
-      <h2>Agregar Nuevo Empleado</h2>
+      <h2 className="bg-dark text-bg-dark p-2">Agregar Nuevo Empleado</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formFullName">
-          <Form.Label>Nombre Completo</Form.Label>
+          <Form.Label className='form-label'>Nombre Completo</Form.Label>
           <Form.Control
+          className='form-control'
             type="text"
             placeholder="Ingrese el nombre completo"
             name="fullName"
@@ -44,8 +45,9 @@ const EmpleadoForm = ({ agregarEmpleado }) => {
         </Form.Group>
 
         <Form.Group controlId="formTitle">
-          <Form.Label>Cargo</Form.Label>
+          <Form.Label className='form-label'>Cargo</Form.Label>
           <Form.Control
+          className='form-control'
             type="text"
             placeholder="Ingrese el cargo"
             name="title"
@@ -56,8 +58,9 @@ const EmpleadoForm = ({ agregarEmpleado }) => {
         </Form.Group>
 
         <Form.Group controlId="formDepartment">
-          <Form.Label>Departamento</Form.Label>
+          <Form.Label className='form-label'>Departamento</Form.Label>
           <Form.Control
+          className='form-control'
             type="text"
             placeholder="Ingrese el departamento"
             name="department"
@@ -68,8 +71,9 @@ const EmpleadoForm = ({ agregarEmpleado }) => {
         </Form.Group>
 
         <Form.Group controlId="formPic">
-          <Form.Label>Foto (nombre del archivo con extensión)</Form.Label>
+          <Form.Label className='form-label'>Foto (nombre del archivo con extensión)</Form.Label>
           <Form.Control
+          className='form-control'
             type="text"
             placeholder="Ingrese el nombre del archivo de la foto"
             name="pic"
@@ -78,8 +82,7 @@ const EmpleadoForm = ({ agregarEmpleado }) => {
             required
           />
         </Form.Group>
-
-        <Button variant="primary" type="submit">
+        <Button className='btn btn-primary my-3' type="submit">
           Agregar Empleado
         </Button>
       </Form>

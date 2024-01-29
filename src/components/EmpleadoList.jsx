@@ -4,7 +4,7 @@ import EmpleadoCard from "./EmpleadoCard";
 const EmpleadoList = ({ empleados, eliminarEmpleado }) => {
   return (
     <div>
-      <h2>Listado de Empleados</h2>
+      <h2 className="bg-dark text-bg-dark p-2">Lista de Empleados</h2>
       <div className="d-flex flex-wrap">
         {empleados.map((empleado) => (
           <EmpleadoCard
