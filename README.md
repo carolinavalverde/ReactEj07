@@ -9,8 +9,8 @@ Diseño Responsivo: Utiliza Bootstrap para garantizar un diseño agradable y fun
 
 ## 3. Despliegue
 
-La aplicación ColorPalette está desplegada y disponible en: 
-https://listadeempleados.netlify.app/
+La aplicación Lista de empleados está desplegada y disponible en: 
+https://listadeempleados-07.netlify.app/
 
 ## 4. Tecnologías Utilizadas
 React: Desarrollo de la interfaz de usuario modular y reactiva.
