@@ -6,7 +6,7 @@ const EmpleadoCard = ({ empleado, eliminarEmpleado }) => {
     <Card className="d-flex mb-3">
       <div className="row g-0">
         <div className="col-4">
-          <Card.Img src={empleado.pic} className="h-75 my-auto img-fluid" />
+          <Card.Img src={empleado.pic} className="h-75 img-fluid" />
         </div>
         <div className="col-8">
           <Card.Body>
