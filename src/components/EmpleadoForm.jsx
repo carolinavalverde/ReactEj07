@@ -71,6 +71,7 @@ const EmpleadoForm = ({ agregarEmpleado }) => {
         </Form.Group>
 
         <Form.Group controlId="formPic">
+          <Form.Label className="form-label">Foto</Form.Label>
           <Form.Control
             className="form-control"
             type="text"
@@ -79,13 +80,6 @@ const EmpleadoForm = ({ agregarEmpleado }) => {
             value={nuevoEmpleado.pic}
             onChange={handleInputChange}
             required
-          />
-          <Form.Label className="form-label">Vista previa</Form.Label>
-          <img
-            src={nuevoEmpleado.pic}
-            alt="Vista previa"
-            className="img-thumbnail"
-            style={{ maxHeight: "100px" }}
           />
         </Form.Group>
         <Button className="btn btn-primary my-3" type="submit">
